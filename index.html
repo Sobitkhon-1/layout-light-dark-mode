@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header"> <div class="logo">🌟 Logo</div>
+    <button class="dark-toggle" onclick="toggleDark()" id="modeBtn">🌙 Dark Mode</button>
+    </div>
+    <div class="space">
+        <ul>
+            <li class="nav"><h3>Nav </h3></li>
+            <li class="article">
+
+              <div class="slider-container">
+                <center>Overview</center>
+
+                <div class="slider-wrapper">
+                    <a href="#card1" class="arrow left">&#8592;</a>
+                    <a href="#card4" class="arrow right">&#8594;</a>
+                  
+                    <div class="slider">
+                      <div class="card" id="card1">Card 1</div>
+                      <div class="card" id="card2">Card 2</div>
+                      <div class="card" id="card3">Card 3</div>
+                      <div class="card" id="card4">Card 4</div>
+                    </div>
+                </div>
+              </div>
+
+             </li>
+            <li class="aside"><h3>Aside</h3></li>
+
+        </ul>
+    </div>
+    <footer>
+        <h3>Footer</h3>
+    </footer>
+
+    <script>
+        function toggleDark() {
+          const body = document.body;
+          const btn = document.getElementById("modeBtn");
+    
+          body.classList.toggle("dark");
+    
+          if (body.classList.contains("dark")) {
+            btn.textContent = "☀️ Light Mode";
+          } else {
+            btn.textContent = "🌙 Dark Mode";
+          }
+        }
+      </script>
+</body>
+</html>
